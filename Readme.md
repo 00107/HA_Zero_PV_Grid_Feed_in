@@ -17,7 +17,7 @@ If sevaral Sensors are selected, those will be summed up.
 Entity to set the non persistant absolut limit in W. It should be the non persistant limit to avoid too many writes towards the flash memory.
 
 ### InverterOnlineStatus:
-Entity indicating if the inverter is available ('On' -> available)
+Entity indicating if the inverter is available ('Normal' -> available)
 
 
 Kudos for the simple algorithm and idea go to:
