@@ -130,7 +130,7 @@ trigger:
   entity_id: !input 'GridPowerMeters'
 condition:
 - condition: template
-  value_template: '{{ states(inverteronline) == "Normal"}}'
+  value_template: '{{ states(inverteronline) == "On"}}'
 - condition: template
   value_template: |
     {%- set last = state_attr(this.entity_id, 'last_triggered') %}
