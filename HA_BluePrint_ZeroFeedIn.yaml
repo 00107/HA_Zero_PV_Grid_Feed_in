@@ -22,7 +22,7 @@ blueprint:
     Entity to set the non persistant absolut limit in W. It should be the non persistant limit to avoid too many writes towards the flash memory.
 
     <u>InverterOnlineStatus</u>
-    Entity indicating if the inverter is available ('On' -> available)
+    Entity indicating if the inverter is available ('Normal' -> available)
 
 
     Kudos for the simple algorithm and idea go to:
@@ -130,7 +130,7 @@ trigger:
   entity_id: !input 'GridPowerMeters'
 condition:
 - condition: template
-  value_template: '{{ states(inverteronline) == "on"}}'
+  value_template: '{{ states(inverteronline) == "Normal"}}'
 - condition: template
   value_template: |
     {%- set last = state_attr(this.entity_id, 'last_triggered') %}
